@@ -12,13 +12,14 @@ import News from "./News"
 function Layout() {
 	return(
 		<Router>
-			<NavLink to="/" exact>
+			<div className="nav-wrap">
+			<NavLink className="nav-element" to="/" exact>
 				Home
 			</NavLink>
-			<NavLink to="Login" exact>
+			<NavLink className="nav-element" to="Login" exact>
 				Login
 			</NavLink>
-			<NavLink to="News" exact>
+			<NavLink className="nav-element" to="News" exact>
 				News
 			</NavLink>
 			<Switch>
@@ -26,6 +27,7 @@ function Layout() {
 				<Route path="/Login" exact component={Login} />
 				<Route path="/News" exact component={News} />
 			</Switch>
+			</div>
 		</Router>
 
 

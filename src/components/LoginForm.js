@@ -22,7 +22,9 @@ function LoginForm() {
 
 	return (
 		<>
+		<h2>This is how you can log in. What you write will be logged in the console</h2>
 		<form onSubmit={handleSubmit(onSubmit)}>
+			<label for="userName">User Name: </label>
 			<input
 				 name="userName" 
 				 placeholder="Username..." 
@@ -31,6 +33,8 @@ function LoginForm() {
 
 				 })} />
 			{errors.userName && <p>{errors.userName.message}</p>}
+			<br />
+			<label for="password">Password: </label>
 			<input 
 				name="password" 
 				placeholder="Password..." 
@@ -43,6 +47,7 @@ function LoginForm() {
 			} />
 			
 			{errors.password && <p>{errors.password.message}</p>}
+			<br />
 			<input type="submit"/>
 		</form>
 		</>
